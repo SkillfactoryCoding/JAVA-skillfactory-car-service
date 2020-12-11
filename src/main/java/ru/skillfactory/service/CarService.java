@@ -11,6 +11,6 @@ public class CarService {
     private DefaultCar defaultCar;
 
     public void launchCar() {
-        defaultCar.setPedalPressure(10);
+        defaultCar.setPressure(50);
     }
 }

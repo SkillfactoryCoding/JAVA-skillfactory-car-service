@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DefaultCar {
+public class DefaultCar implements ICar {
 
     @Autowired
     private IEngine engine;
@@ -13,7 +13,7 @@ public class DefaultCar {
         return engine.getEngineRotation() * 1.5F;
     }
 
-    public void setPedalPressure(final float pedalPressure) {
+    public void setPressure(final float pedalPressure) {
         engine.setFuelConsumptionRate(pedalPressure);
     }
 }
